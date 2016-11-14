@@ -15,14 +15,8 @@
       </form>
 
       <h3>My Todos</h3>
-      <button ng-click="changeTitle()">{{ buttonTitle }}</button>
       <ul class="todo-list">
         <li ng-repeat="task in tasks" data-id="{{ task.id }}">{{ task.title }}</li>
-      </ul>
-
-      <h3> Stuff about a dog </h3>
-      <ul>
-        <li ng-repeat="(property, val) in example">The {{ property }} property is {{ val }}</li>
       </ul>
     </div>
     <script src="js/bundle.js"></script>
