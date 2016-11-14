@@ -7,10 +7,20 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
-    <div class="container">
-      <p>Welcome to your life.</p>
+  <body ng-app="app">
+    <div class="container" ng-controller="MainController" >
+      <form>
+        <input class="form-field" type="text" ng-model="message" />
+        <input class="form-field" type="date" />
+      </form>
+
+      <h3>My Todos</h3>
+      <ul class="todo-list">
+        <li>{{ message }}</li>
+        <li>{{ message }}</li>
+      </ul>
     </div>
+    {{ message }}
     <script src="js/bundle.js"></script>
   </body>
 </html>
