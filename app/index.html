@@ -9,18 +9,22 @@
   </head>
   <body ng-app="app">
     <div class="container" ng-controller="MainController" >
-      <form>
+      <form ng-submit="addTask(message)">
         <input class="form-field" type="text" ng-model="message" />
         <input class="form-field" type="date" />
       </form>
 
       <h3>My Todos</h3>
+      <button ng-click="changeTitle()">{{ buttonTitle }}</button>
       <ul class="todo-list">
-        <li>{{ message }}</li>
-        <li>{{ message }}</li>
+        <li ng-repeat="task in tasks" data-id="{{ task.id }}">{{ task.title }}</li>
+      </ul>
+
+      <h3> Stuff about a dog </h3>
+      <ul>
+        <li ng-repeat="(property, val) in example">The {{ property }} property is {{ val }}</li>
       </ul>
     </div>
-    {{ message }}
     <script src="js/bundle.js"></script>
   </body>
 </html>
